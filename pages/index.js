@@ -5,11 +5,11 @@ export default function Home() {
   return (
     <div className='under-construction'>
       <Head>
-        <title>Tedesco Group</title>
+        <title>MAYKS' Service</title>
       </Head>
       <div className='flex flex-col justify-center items-center pt-6'>
         <div className=''>
-          <Image src='/images/logo.png' width={500} height={250} />
+          <Image src='/images/logo.png' width={300} height={300} />
         </div>
         <div className='p-4 '>
         <h1 className='text-3xl text-center'>

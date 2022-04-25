@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className='under-construction'>
       <Head>
-        <title>MAYKS' Service</title>
+        <title>MAYKS Service</title>
       </Head>
       <div className='flex flex-col justify-center items-center pt-6'>
         <div className=''>

@@ -1,0 +1,32 @@
+.mainContainer {
+
+}
+
+.mainSlide {
+    display: flex;
+    justify-content: center;
+}
+
+.mainImg {
+    width: 100%;
+    max-width: 450px;
+    padding-bottom: 1rem;
+}
+
+.thumbContainer {
+    height: 7rem;
+    background-color: #161616;
+    max-width: 80%;
+}
+
+.thumbSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.thumbImg {
+    width: 100%;
+    max-width: 300px;
+}

@@ -1,0 +1,25 @@
+.btn {
+    border-radius: 5px;
+    padding: 10px 36px;
+    color: #f8f8ff;
+}
+
+.primary {
+    background-color: #E57106;
+}
+
+.secondary {
+    background-color: #191970;
+}
+
+.light {
+    background-color: #F0F0F0;
+}
+
+.small {
+    font-size: 1.3rem;
+}
+
+.large {
+    font-size: 1.7rem;
+}

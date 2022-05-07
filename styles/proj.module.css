@@ -1,0 +1,46 @@
+.heading {
+    position: relative;
+    padding: 0 0 1rem 0;
+    text-align: center;
+}
+
+.desc {
+    font-size: 26px;
+    color: #191970;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+.backBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gallery {
+    max-width: 1300px;
+    margin: 7rem auto;
+    background-color: #F0F0F0;
+    padding: 2rem 3rem 1rem 3rem;
+}
+
+@media (max-width: 810px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .backBtn {
+        padding: 3px 7px;
+        position: unset;
+    }
+
+    .gallery {
+        padding: 1rem;
+    }
+}

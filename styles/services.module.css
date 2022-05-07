@@ -1,0 +1,95 @@
+.headingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: 500px;
+    overflow-y: hidden;
+}
+
+.headingImg {
+    width: 100%;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    z-index: -1;
+}
+
+.servicesParaContainer {
+    padding: 6rem 250px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.servicesPara {
+    width: 80%;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.servicesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 19px;
+    justify-items: center;
+    padding-bottom: 7rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.serviceCardBody {
+    background-color: #F0F0F0;
+    box-shadow: 0px 4px 4px
+        rgba(22, 22, 22, 0.2);
+    border-radius: 5px;
+    padding: 36px;
+    max-width: 420px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.serviceIcon {
+    margin: 0 auto;
+    font-size: 2.2rem;
+    color: #E57106;
+}
+
+.serviceHeading {
+    font-weight: 700;
+    color: #191970;
+    font-size: 28px;
+    line-height: 36px;
+}
+
+.serviceText {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+@media (max-width: 810px) {
+    .headingContainer {
+        overflow-x: hidden;
+    }
+
+    .headingImg {
+        width: 300%;
+    }
+
+    .servicesParaContainer {
+        padding: 4rem 0rem;
+    }
+
+    .servicesContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem 7rem 1rem;
+    }
+}

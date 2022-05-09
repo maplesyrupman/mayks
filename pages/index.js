@@ -23,17 +23,17 @@ export default function Home() {
             </div>
             <div className={styles.heroBtns}>
               <Link href='/contact'>
-                <a className="btn btnSm bgOrange">Get a Quote</a>
+                <a className="btn btnSm bgGold blackText">Get a Quote</a>
               </Link>
               <Link href='/gallery'>
-                <a className="btn btnSm bgBlue">View Our Projects</a>
+                <a className="btn btnSm bgBlack">View Our Projects</a>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className={styles.aboutContainer}>
+      <section className={`${styles.aboutContainer} bgBlack`}>
         <div >
           <h2 className={styles.heading}>
             Delivering Exceptional Services Since 1995
@@ -43,7 +43,7 @@ export default function Home() {
           </p>
           <div className={styles.aboutBtn}>
             <Link href='/about'>
-              <a className='btn btnSm bgBlue'>
+              <a className='btn btnSm bgGold blackText'>
                 About Us
               </a>
             </Link>
@@ -52,16 +52,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.comResContainer}>
+      <section className={`${styles.comResContainer} bgBlack`}>
         <div className={styles.comResTextContainer}>
-          <h2 className={`${styles.heading} ${styles.light} ${styles.left}`}>
+          <h2 className={`${styles.heading} ${styles.dark} ${styles.left}`}>
             Experienced in Commercial <br />
             and Residential Projects
           </h2>
-          <p className={`${styles.text} ${styles.light} ${styles.left}`}>
+          <p className={`${styles.text} ${styles.dark} ${styles.left}`}>
             One tasty titbit of information.
           </p>
-          <p className={`${styles.text} ${styles.light} ${styles.left}`}>
+          <p className={`${styles.text} ${styles.dark} ${styles.left}`}>
             Another tasty titbit of information with a longer explanation
             of what it means
           </p>
@@ -81,9 +81,6 @@ export default function Home() {
       </section>
 
       <section className={styles.testsContainer}>
-        {/* <div>
-          <Image src='/images/testimonialBG-overlay.jpg' layout='responsive' width={3} height={2} />
-        </div> */}
         <h2 className={`${styles.heading} ${styles.testHeading}`}>
           Testimonials
         </h2>

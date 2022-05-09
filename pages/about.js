@@ -33,7 +33,7 @@ export default function About() {
                     </p>
                 </div>
             </section>
-            <section className={styles.articleContainer}>
+            {/* <section className={styles.articleContainer}>
                 <div className={styles.articleCard}>
                     <div className={styles.articleImg}>
                         <Image src='/images/article-thumb.jpg' layout='responsive' width={1033} height={1325} alt='house' />
@@ -69,7 +69,7 @@ export default function About() {
 
                 </div>
                 <h3 className={`${styles.communityHeading} ${styles.comHeadSm}`}>Giving Back to the Community</h3>
-            </section>
+            </section> */}
         </Layout>
     )
 }

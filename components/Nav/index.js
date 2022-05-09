@@ -18,7 +18,7 @@ export default function Nav({ home }) {
         <div>
             <nav className={styles.nav}>
                 <div className={styles.logoContainer}>
-                    <Image src={'/images/alt-logo.svg'} width={240} height={95} alt='logo'/>
+                    <Image src={'/images/logo.png'} layout='responsive' width={1} height={1} alt='logo'/>
                 </div>
 
                 <div className="flex items-center">
@@ -45,7 +45,7 @@ export default function Nav({ home }) {
                         </li>
                         <li>
                             <Link href='/contact'>
-                                <a className={`bgOrange btn btnLg`}>
+                                <a className={`bgGold blackText btn btnLg`}>
                                     Contact
                                 </a>
                             </Link>

@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #191970;
+    background-color: #000000;
     z-index: 9;
 }
 
@@ -22,7 +22,9 @@
 
 .logoContainer {
     width: 100%;
-    max-width: 250px;
+    max-width: 80px;
+    display: flex;
+    flex-direction: column;
 }
 
 .burger {
@@ -51,13 +53,13 @@
 
     .burger {
         display: flex;
-        color: #E57106;
+        color: #F7CC70;
         font-size: 2.7rem;
     }
 
     .dropdown {
         position: absolute;
-        background-color: #191970;
+        background-color: #000000;
         display: flex;
         width: 100%;
         z-index: 2;

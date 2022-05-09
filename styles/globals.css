@@ -90,6 +90,10 @@ select {
 
 /* custom css start */
 
+main {
+  background-color: #000000;
+}
+
 .btn {
   border-radius: 5px;
   padding: 10px 36px;
@@ -100,16 +104,22 @@ select {
   color: #191970 !important;
 }
 
-.bgBlue {
-  background-color: #191970 !important;
+.bgBlack {
+  background-color: #000000 !important;
 }
 
-.bgOrange {
-  background-color: #E57106 !important;
+.bgGold {
+  background-color: #F7CC70 !important;
 }
 
 .bgLight {
   background-color: #F0F0F0;
+}
+
+.btnXs {
+  font-size: .9rem;
+  padding: 8px 22px;
+  max-width: fit-content;
 }
 
 .btnSm {
@@ -120,19 +130,28 @@ select {
   font-size: 1.7rem;
 }
 
+.whiteText {
+  color: #ffffff;
+}
+
+.blackText {
+  color: #000000;
+}
+
 .pageHeading {
   font-size: 3.9rem;
   color: #f8f8ff;
   font-family: eloquent-jf-pro, serif !important;
   font-weight: 400;
   font-style: normal;
+  z-index: 3;
   /* white-space: nowrap; */
 }
 
 .swiper-button-prev {
-  color: #E57106 !important;
+  color: #F7CC70 !important;
 }
 
 .swiper-button-next {
-  color: #E57106 !important;
+  color: #F7CC70 !important;
 }

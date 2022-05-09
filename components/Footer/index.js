@@ -11,7 +11,7 @@ export default function Footer() {
         <div>
             <div className={styles.footerMain}>
                 <div className={styles.logoContainer}>
-                    <Image src={'/images/logo.png'} layout='responsive' width={400} height={200} alt='logo'/>
+                    <Image src={'/images/logo.png'} layout='responsive' width={1} height={1} alt='logo'/>
                 </div>
                 <section className='lg:flex'>
                     <div className={styles.linkContainer}>

@@ -4,6 +4,7 @@
 
 html, body {
     height: 100vh;
+    background-color: black;
 }
 
 li {
@@ -91,7 +92,11 @@ select {
 /* custom css start */
 
 main {
-  background-color: #000000;
+  background-color: black;
+}
+
+.pageContainer {
+  padding-top: 136px;
 }
 
 .btn {
@@ -100,8 +105,8 @@ main {
   color: #f8f8ff;
 }
 
-.blue {
-  color: #191970 !important;
+.gold {
+  color: #F7CC70 !important;
 }
 
 .bgBlack {
@@ -134,15 +139,19 @@ main {
   color: #ffffff;
 }
 
+.goldText {
+  color: #F7CC70;
+}
+
 .blackText {
   color: #000000;
 }
 
 .pageHeading {
   font-size: 3.9rem;
-  color: #f8f8ff;
-  font-family: eloquent-jf-pro, serif !important;
-  font-weight: 400;
+  color: #F7CC70;
+  font-family: 'DM Serif Display', serif !important;
+  font-weight: 700;
   font-style: normal;
   z-index: 3;
   /* white-space: nowrap; */

@@ -64,8 +64,14 @@
     max-width: 600px;
     display: flex;
     flex-direction: column;
+    padding-right: 5rem;
     gap: 1rem;
     align-items: center;
+}
+
+.serviceSection:nth-child(2n) > .serviceTextContainer {
+    padding-left: 5rem;
+    padding-right: 0;
 }
 
 .serviceHeading {
@@ -78,7 +84,6 @@
 .serviceText {
     font-size: 20px;
     line-height: 30px;
-    padding: 0 1rem;
 }
 
 .imgPlaceHolder {

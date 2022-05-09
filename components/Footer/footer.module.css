@@ -1,13 +1,15 @@
 .footerMain {
     display: flex;
-    background-color: #161616;
+    background-color: black;
     padding: 0 100px;
     justify-content: space-around;
+    border-top: 1px solid #F7CC70;
+    box-shadow: 0px 3px 10px #F7CC70;
 }
 
 .footerLegal {
     padding: 16px 80px;
-    background-color: #161616;
+    background-color: black;
     display: flex;
     justify-content: space-between;
 }
@@ -21,7 +23,7 @@
 }
 
 .link {
-    color: #f8f8ff;
+    color: #F7CC70;
     text-decoration: underline;
 }
 
@@ -31,17 +33,17 @@
 }
 
 .text {
-    color: #f8f8ff;
+    color: #F7CC70;
 }
 
 .heading {
-    color: #f8f8ff;
+    color: #F7CC70;
     font-size: 1.4rem;
 }
 
 .divider {
-    height: 5px;
-    background-color: #f8f8ff;
+    height: 3px;
+    background-color: #F7CC70;
 }
 
 .logoContainer {

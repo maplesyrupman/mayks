@@ -20,7 +20,7 @@ export default function Gallery({ thumbs }) {
     return (
         <Layout>
             <div className={styles.headingContainer}>
-                <h1 className={`pageHeading blue`}>
+                <h1 className={`pageHeading gold`}>
                     Gallery
                 </h1>
                 <p className={styles.headingPara}>

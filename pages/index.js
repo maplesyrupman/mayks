@@ -17,16 +17,14 @@ export default function Home() {
 
           <div className={styles.heroContent}>
             <div className={styles.heroTextContainer}>
-              <h1 className={`pageHeading ${styles.heroText}`}>Restoration.</h1>
-              <h1 className={`pageHeading ${styles.heroText}`}>Design.</h1>
-              <h1 className={`pageHeading ${styles.heroText}`}>Build.</h1>
+              <h1 className={`pageHeading ${styles.heroText}`}>MAYK&apos;S SERVICE</h1>
             </div>
             <div className={styles.heroBtns}>
               <Link href='/contact'>
                 <a className="btn btnSm bgGold blackText">Get a Quote</a>
               </Link>
               <Link href='/gallery'>
-                <a className="btn btnSm bgBlack">View Our Projects</a>
+                <a className="btn btnSm bgBlack goldText">View Our Projects</a>
               </Link>
             </div>
           </div>
@@ -36,7 +34,7 @@ export default function Home() {
       <section className={`${styles.aboutContainer} bgBlack`}>
         <div >
           <h2 className={styles.heading}>
-            Delivering Exceptional Services Since 1995
+            Serving the GTA since 2003
           </h2>
           <p className={styles.text}>
             Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt.

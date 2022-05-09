@@ -64,13 +64,13 @@ export default function Contact() {
     return (
         <Layout>
             <div className={styles.headingContainer}>
-                <h1 className={`pageHeading blue`}>
+                <h1 className={`pageHeading gold`}>
                     Contact Us
                 </h1>
             </div>
             <div className={styles.pageContainer}>
                 <div className={styles.infoContainer}>
-                    <h2 className={styles.headerSecondary}>Get in touch.</h2>
+                    <h2 className={`${styles.headerSecondary} blackText`}>Get in touch.</h2>
                     <div className={styles.infoTextContainer}>
                         <div>
                             <h3 className={styles.heading}>Domenic Tedesco - President</h3>
@@ -94,7 +94,7 @@ export default function Contact() {
                     <form className={styles.formBody}
                         onSubmit={handleSubmit}
                     >
-                        <h2 className={styles.headerSecondary}>Get a quote.</h2>
+                        <h2 className={`${styles.headerSecondary} goldText`}>Get a quote.</h2>
                         <p className={styles.errorMsg}>* required field</p>
                         <div className={styles.fieldContainer}>
                             <label htmlFor='name' className={styles.label}>Name<span className={styles.errorMsg}> *</span></label>
@@ -129,7 +129,7 @@ export default function Contact() {
                             />
                         </div>
                         <div>
-                            <button className='btn btnSm bgOrange' >
+                            <button className='btn btnSm bgGold blackText' >
                                 Submit
                             </button>
                         </div>

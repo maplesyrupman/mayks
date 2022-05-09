@@ -21,7 +21,7 @@ export default function About() {
             </div>
             <section className={styles.aboutContainer}>
                 <div className={styles.aboutText}>
-                    <h2 className={`${styles.aboutHeading} pageHeading`}>Since 1995</h2>
+                    <h2 className={`${styles.aboutHeading} pageHeading`}>Mayk&apos;s Service</h2>
                     <p>
                         Curabitur aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
                     </p>

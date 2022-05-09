@@ -30,7 +30,7 @@ export default function Project({ imageCount, proj, desc }) {
                 <div className={styles.gallery}>
                     <div className={styles.heading}>
                         <Link href='/gallery'>
-                            <a className={`btn bgOrange ${styles.backBtn}`}>back</a>
+                            <a className={`btn bgGold ${styles.backBtn}`}>back</a>
                         </Link>
                         <h1 className={styles.desc}>
                             {desc}

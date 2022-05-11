@@ -20,11 +20,11 @@
 
 .gallery {
     max-width: 1300px;
-    margin: 7rem auto;
+    margin: 3rem auto;
     background-color: black;
     padding: 2rem 3rem 1rem 3rem;
-    border: 1px solid #F7CC70;
-    border-radius: 5px;
+    /* border: 1px solid #F7CC70; */
+    border-radius:5px;
 }
 
 @media (max-width: 810px) {

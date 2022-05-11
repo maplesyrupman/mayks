@@ -33,6 +33,30 @@ export default function About() {
                     </p>
                 </div>
             </section>
+            <section className={styles.bioSection} >
+                <div className={styles.bioContainer}>
+                    <div className={styles.bioImg}>
+
+                    </div>
+                    <div className={styles.bioTextContainer}>
+                        <h3 className={styles.bioName}>Dodish</h3>
+                        <p className={styles.bioPara}>
+                            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+                        </p>
+                    </div>
+                </div>
+                <div className={styles.bioContainer}>
+                    <div className={styles.bioImg}>
+
+                    </div>
+                    <div className={styles.bioTextContainer}>
+                        <h3 className={styles.bioName}>Dodish</h3>
+                        <p className={styles.bioPara}>
+                            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+                        </p>
+                    </div>
+                </div>
+            </section>
             {/* <section className={styles.articleContainer}>
                 <div className={styles.articleCard}>
                     <div className={styles.articleImg}>

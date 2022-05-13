@@ -50,8 +50,17 @@
 
 .cardImg {
     width: 100%;
-    height: min-content;
+    height: 100%;
     border-radius: 5px;
+}
+
+.imgContainer {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 400px;
+    max-height: 400px;
+    display: flex;
+    align-content: center;
 }
 
 

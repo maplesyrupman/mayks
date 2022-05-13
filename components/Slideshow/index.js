@@ -2,16 +2,15 @@ import { useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Thumbs } from "swiper"
 
-
 import "swiper/css"
 import "swiper/css/navigation"
 import 'swiper/css/thumbs'
 import styles from '../../styles/slideshow.module.css'
 import Image from "next/image"
 
-export default function Slideshow({ imageCount, proj }) {
+export default function Slideshow({ imgDimensions, proj }) {
     const [thumbsSwiper, setThumbsSwiper] = useState(null)
-    const imageNums = Array.from('x'.repeat(imageCount))
+    const imgNames = Object.keys(imgDimensions)
 
     return (
         <>
@@ -24,11 +23,18 @@ export default function Slideshow({ imageCount, proj }) {
                 loop
             >
 
-                {imageNums.map((imgNum, idx) => {
+                {imgNames.map((img) => {
+                    const {height, width} = imgDimensions[img]
                     return (
-                        <SwiperSlide key={`${idx}-slide`} className={styles.mainSlide}>
+                        <SwiperSlide key={img} className={styles.mainSlide}>
                                 <div className={styles.mainImg}>
-                                    <Image src={`/projects/${proj}/${proj}-${idx}.jpg`} layout='responsive' height={640} width={481} alt='hey' />
+                                    <Image 
+                                        src={`/projects/${proj}/${img}`} 
+                                        layout='intrinsic' 
+                                        height={height} 
+                                        width={width} 
+                                        alt='hey' 
+                                    />
                                 </div>
                         </SwiperSlide>
                     )
@@ -43,14 +49,21 @@ export default function Slideshow({ imageCount, proj }) {
                 loop
                 
                 className={styles.thumbContainer}
-                slidesPerView={2}
+                slidesPerView={3}
                 cssMode
             >
-                {imageNums.map((imgNum, idx) => {
+                {imgNames.map((img) => {
+                    const {height, width} = imgDimensions[img]
                     return (
-                        <SwiperSlide key={`${idx}-slide`} className={styles.thumbSlide}>
+                        <SwiperSlide key={img} className={styles.thumbSlide}>
                                 <div className={styles.thumbImg}>
-                                    <Image src={`/projects/${proj}/${proj}-${idx}.jpg`} layout='responsive' height={640} width={481} alt='hey' />
+                                    <Image 
+                                        src={`/projects/${proj}/${img}`} 
+                                        layout='responsive' 
+                                        height={height} 
+                                        width={width} 
+                                        alt='hey' 
+                                    />
                                 </div>
                         </SwiperSlide>
                     )

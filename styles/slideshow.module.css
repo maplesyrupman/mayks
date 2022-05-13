@@ -4,15 +4,14 @@
 }
 
 .mainImg {
-    width: 100%;
-    max-width: 500px;
+    width: 500px;
     padding-bottom: 1rem;
 }
 
 .thumbContainer {
     height: 7rem;
     background-color: #161616;
-    max-width: 80%;
+    max-width: 60%;
 }
 
 .thumbSlide {
@@ -25,4 +24,6 @@
 .thumbImg {
     width: 100%;
     max-width: 300px;
+    /* height: min-content; */
+    overflow-y: hidden;
 }

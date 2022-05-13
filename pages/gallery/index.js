@@ -4,8 +4,6 @@ import Layout from "../../components/Layout"
 import styles from '../../styles/gallery.module.css'
 import { getThumbData } from "../../lib/gallery"
 
-const testThumbs = [1, 2, 3, 4, 5]
-
 export async function getStaticProps() {
     const thumbs = getThumbData()
     return {
@@ -33,8 +31,16 @@ export default function Gallery({ thumbs }) {
                         return (
                             <Link href={`/gallery/${thumb.proj}`} key={`proj${idx}`} passHref>
                                 <div key={thumb} className={styles.projectCard}>
-                                    <div className={styles.cardImg}>
-                                        <Image src={`/projects/${thumb.proj}/proj${idx + 1}-0.jpg`} layout='responsive' width={300} height={300} alt='project image' />
+                                    <div className={styles.imgContainer}>
+                                        <div className={styles.cardImg}>
+                                            <Image
+                                                src={`${thumb.thumbPath}`}
+                                                layout='responsive'
+                                                width={1}
+                                                height={1}
+                                                alt='project image'
+                                            />
+                                        </div>
                                     </div>
                                     <div className={styles.projDesc}>
                                         <h3>{thumb.desc}</h3>

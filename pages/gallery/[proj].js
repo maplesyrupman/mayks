@@ -22,7 +22,7 @@ export async function getStaticPaths() {
     }
 }
 
-export default function Project({ imageCount, proj, desc }) {
+export default function Project({ imgDimensions, proj, desc }) {
 
     return (
         <Layout>
@@ -37,7 +37,7 @@ export default function Project({ imageCount, proj, desc }) {
                         </h1>
                     </div>
                     <Slideshow
-                        imageCount={imageCount}
+                        imgDimensions={imgDimensions}
                         proj={proj}
                     />
                 </div>

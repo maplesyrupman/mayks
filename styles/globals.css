@@ -96,7 +96,7 @@ main {
 }
 
 .pageContainer {
-  padding-top: 136px;
+  padding-top: 132px;
 }
 
 .btn {
@@ -163,4 +163,10 @@ main {
 
 .swiper-button-next {
   color: #F7CC70 !important;
+}
+
+@media screen and (max-width: 900px) {
+  .pageContainer {
+    padding-top: 100px;
+  }
 }

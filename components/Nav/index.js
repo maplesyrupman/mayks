@@ -1,93 +1,71 @@
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
-
+import { useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 import styles from './nav.module.css'
 
-import { FiMenu, FiX } from "react-icons/fi"
+import { HiMenu } from "react-icons/hi";
 
-export default function Nav({ home }) {
-    const [dropdownVisible, setDropdownVisibility] = useState(false)
+export default function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    function toggleDropdown() {
-        setDropdownVisibility(!dropdownVisible)
+    const toggleDropdown = () => {
+        setMenuOpen(!menuOpen);
     }
 
-
     return (
-        <div>
-            <nav className={`${styles.nav} ${!dropdownVisible ? styles.bottomGlow : ''}`}>
-                <div className={styles.logoContainer}>
-                    <Image src={'/images/logo.png'} layout='responsive' width={1} height={1} alt='logo'/>
-                </div>
-
-                <div className={`flex items-center`}>
-                    <ul className={styles.linkContainer}>
-                        <li>
-                            <Link href='/'>
-                                <a className={styles.navLink}>Home</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='/about'>
-                                <a className={styles.navLink}>About</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='/services'>
-                                <a className={styles.navLink}>Services</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='/gallery'>
-                                <a className={styles.navLink}>Gallery</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href='/contact'>
-                                <a className={`bgGold blackText btn btnLg`}>
-                                    Contact
-                                </a>
-                            </Link>
-                        </li>
-                    </ul>
-                    <div className={styles.burger}>
-                        <button onClick={toggleDropdown}>
-                            {dropdownVisible ? <FiX /> : <FiMenu />}
-                        </button>
+        <header className={`${styles.header}`}>
+            <Link href='/'>
+                <a className={styles.logoContainer}>
+                    <div className={styles.logo}>
+                        <Image src={'/images/logo.png'} layout='responsive' width={1} height={1} alt='logo' />
                     </div>
-                </div>
-            </nav>
-            {/* <div className={`${styles.dropdown} ${!dropdownVisible ? styles.minimizeDropdown : ''} ${dropdownVisible && styles.bottomGlow}`}>
-                <ul className={styles.dropdownLinks}>
-                    <li>
+                </a>
+            </Link>
+            <nav className={styles.nav}>
+                <button className={styles.hamburger} onClick={toggleDropdown}>
+                    <HiMenu className='goldText' />
+                </button>
+                <ul className={`${styles.dropdownMenu} ${menuOpen ? styles.menuOpen : ''}`}>
+                    <li className={styles.navLink}>
                         <Link href='/'>
-                            <a className={styles.navLink}>Home</a>
+                            <a
+                                className={styles.navLink}
+                                onClick={toggleDropdown}
+                            >
+                                Home
+                            </a>
                         </Link>
                     </li>
-                    <li>
+                    <li className={styles.navLink}>
                         <Link href='/about'>
-                            <a className={styles.navLink}>About</a>
+                            <a className={styles.navLink} onClick={toggleDropdown} >
+                                About
+                            </a>
                         </Link>
                     </li>
-                    <li>
+                    <li className={styles.navLink}>
                         <Link href='/services'>
-                            <a className={styles.navLink}>Services</a>
+                            <a className={styles.navLink} onClick={toggleDropdown} >
+                                Services
+                            </a>
                         </Link>
                     </li>
-                    <li>
+                    <li className={styles.navLink}>
                         <Link href='/gallery'>
-                            <a className={styles.navLink}>Gallery</a>
+                            <a className={styles.navLink} onClick={toggleDropdown} >
+                                Gallery
+                            </a>
                         </Link>
                     </li>
-                    <li>
+                    <li className={styles.navLink}>
                         <Link href='/contact'>
-                            <a className={styles.navLink}>Contact</a>
+                            <a className={styles.navLink} onClick={toggleDropdown} >
+                                Contact
+                            </a>
                         </Link>
                     </li>
                 </ul>
-            </div> */}
-        </div>
-
+            </nav>
+        </header>
     )
 }

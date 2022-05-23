@@ -1,6 +1,7 @@
 .hero {
     width: 100%;
     position: relative;
+    height: 100vh;
 }
 
 .heroContent {
@@ -23,8 +24,12 @@
     gap: 1rem;
 }
 
+.heroBreak {
+    display: none;
+}
+
 .heroImg {
-    height: calc(100vh - 136px);
+    height: calc(100vh - 132px);
     overflow-y: hidden;
 }
 
@@ -117,7 +122,7 @@
 
 
 
-@media (max-width: 810px) {
+@media screen and (max-width: 810px) {
 
     .heroWrapper {
         width: 100vw;
@@ -196,5 +201,11 @@
         padding: 1rem;
         padding-top: 7rem;
         padding-bottom: 7rem;
+    }
+}
+
+@media screen and (max-width: 432px) {
+    .heroBreak {
+        display: unset;
     }
 }

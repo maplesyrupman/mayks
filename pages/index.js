@@ -17,7 +17,7 @@ export default function Home() {
 
           <div className={styles.heroContent}>
             <div className={styles.heroTextContainer}>
-              <h1 className={`pageHeading ${styles.heroText}`}>MAYK&apos;S SERVICE</h1>
+              <h1 className={`pageHeading ${styles.heroText}`}>MAYK&apos;S <br className={styles.heroBreak}/> SERVICE</h1>
             </div>
             <div className={styles.heroBtns}>
               <Link href='/contact'>

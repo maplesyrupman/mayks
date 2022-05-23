@@ -9,6 +9,9 @@
     justify-content: space-between;
     background-color: #000000;
     z-index: 9;
+}
+
+.bottomGlow {
     box-shadow: 0 1px 3px #F7CC70;
 }
 
@@ -62,10 +65,11 @@
 
     .dropdown {
         position: absolute;
+        top: 92px;
         background-color: #000000;
         display: flex;
         width: 100%;
-        z-index: 2;
+        z-index: 4;
         justify-content: center;
         overflow-y: hidden;
     }

@@ -9,51 +9,28 @@ import Link from 'next/link'
 const services = [
     {
         title: 'Project Management',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.'
+        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
+        img: '/projects/proj1/img-3.jpg'
     },
     {
         title: 'Full Home Renovation',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.'
+        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
+        img: '/projects/proj1/img-3.jpg'
     },
     {
         title: 'Kitchens',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.'
+        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
+        img: '/projects/proj1/img-3.jpg'
     },
     {
         title: 'Bathrooms',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.'
+        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
+        img: '/projects/proj2/img-6.jpg'
     },
     {
         title: 'Basement Finishing',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.'
-    }
-]
-
-const secondaryServices = [
-    {
-        title: 'Plumbing',
         blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
-        icon: <FaFaucet className={styles.serviceIcon} />
-    },
-    {
-        title: 'Tiling',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
-        icon: <FaBorderAll className={styles.serviceIcon} />
-    },
-    {
-        title: 'Drywall & Framing',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
-        icon: <FaRulerCombined className={styles.serviceIcon} />
-    },
-    {
-        title: 'Flooring',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
-        icon: <FaPuzzlePiece className={styles.serviceIcon} />
-    },
-    {
-        title: 'Carpentry',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
-        icon: <FaHammer className={styles.serviceIcon} />
+        img: '/projects/proj1/img-3.jpg'
     }
 ]
 
@@ -88,8 +65,10 @@ export default function Services() {
                                         <a className='btn btnXs bgGold blackText'>Request a Quote</a>
                                     </Link>
                                 </div>
-                                <div className={styles.imgPlaceHolder}>
-
+                                <div className={styles.imgContainer}>
+                                    <div className={styles.img} >
+                                    <Image src={service.img} layout='fixed' width={400} height={400} alt='service image' />
+                                    </div>
                                 </div>
                             </div>
                         )

@@ -16,12 +16,12 @@ export default function Nav({ home }) {
 
     return (
         <div>
-            <nav className={styles.nav}>
+            <nav className={`${styles.nav} ${!dropdownVisible ? styles.bottomGlow : ''}`}>
                 <div className={styles.logoContainer}>
                     <Image src={'/images/logo.png'} layout='responsive' width={1} height={1} alt='logo'/>
                 </div>
 
-                <div className="flex items-center">
+                <div className={`flex items-center`}>
                     <ul className={styles.linkContainer}>
                         <li>
                             <Link href='/'>
@@ -58,7 +58,7 @@ export default function Nav({ home }) {
                     </div>
                 </div>
             </nav>
-            <div className={`${styles.dropdown} ${dropdownVisible ? '' : styles.minimizeDropdown}`}>
+            {/* <div className={`${styles.dropdown} ${!dropdownVisible ? styles.minimizeDropdown : ''} ${dropdownVisible && styles.bottomGlow}`}>
                 <ul className={styles.dropdownLinks}>
                     <li>
                         <Link href='/'>
@@ -86,7 +86,7 @@ export default function Nav({ home }) {
                         </Link>
                     </li>
                 </ul>
-            </div>
+            </div> */}
         </div>
 
     )

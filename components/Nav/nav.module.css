@@ -22,7 +22,7 @@
 .nav {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     position: relative;
 }
 
@@ -37,11 +37,12 @@
     font-size: 1.7rem;
     line-height: 1rem;
     justify-content: flex-start;
+    
 }
 
 .navLink {
     text-decoration: none;
-    color: white;
+    color: #F7CC70;
 }
 
 @media screen and (max-width: 1024px) {

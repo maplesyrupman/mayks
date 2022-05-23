@@ -57,7 +57,7 @@ export default function Footer() {
                             <li>
                                 <Link href='/'>
                                     <a className={styles.link}>
-                                        admin@tedescogroup.ca
+                                        contact@mayks.ca
                                     </a>
                                 </Link>
                             </li>
@@ -82,7 +82,7 @@ export default function Footer() {
                     </Link>
                 </div>
                 <div className={styles.text}>
-                    ©2022 SMU Design | RWI Labs
+                    RWI Labs
                 </div>
             </section>
         </div>

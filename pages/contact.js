@@ -73,13 +73,13 @@ export default function Contact() {
                     <h2 className={`${styles.headerSecondary} blackText`}>Get in touch.</h2>
                     <div className={styles.infoTextContainer}>
                         <div>
-                            <h3 className={styles.heading}>Domenic Tedesco - President</h3>
-                            <p className={styles.text}>Email: dom@tedescogroup.ca</p>
+                            <h3 className={styles.heading}>Malek Khakrah - President</h3>
+                            <p className={styles.text}>Email: malek@mayks.ca</p>
                         </div>
                         <div>
-                            <h3 className={styles.heading}>Eleanor Lastname - Secretary</h3>
+                            <h3 className={styles.heading}>Dodish Khakrah - Operations Director</h3>
                             <p className={styles.text}>Phone: 416-123-4567</p>
-                            <p className={styles.text}>Email: admin@tedescogroup.ca</p>
+                            <p className={styles.text}>Email: dodish@mayks.ca</p>
                         </div>
                         <div>
                             <h3 className={styles.heading}>Address</h3>

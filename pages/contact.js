@@ -74,11 +74,11 @@ export default function Contact() {
                     <div className={styles.infoTextContainer}>
                         <div>
                             <h3 className={styles.heading}>Malek Khakrah - President</h3>
-                            <p className={styles.text}>Email: malek@mayks.ca</p>
+                            <p className={styles.text}>Email: mayks@mayks.ca</p>
                         </div>
                         <div>
-                            <h3 className={styles.heading}>Dodish Khakrah - Operations Director</h3>
-                            <p className={styles.text}>Phone: 416-123-4567</p>
+                            <h3 className={styles.heading}>Dodish Malek - Operations Director</h3>
+                            <p className={styles.text}>Phone: 416-877-8923</p>
                             <p className={styles.text}>Email: dodish@mayks.ca</p>
                         </div>
                         <div>

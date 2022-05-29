@@ -97,6 +97,10 @@
     margin-bottom: 3rem;
 }
 
+.comResText {
+    width: 50%
+}
+
 .comResImg {
     position: absolute;
     right: 250px;
@@ -188,6 +192,10 @@
         padding: 7rem 3rem;
         padding-bottom: 3rem;
         height: unset;
+    }
+
+    .comResText {
+        width: 100%;
     }
 
     .comResImg {

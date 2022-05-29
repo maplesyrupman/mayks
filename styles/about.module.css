@@ -17,7 +17,7 @@
 }
 
 .aboutContainer {
-    padding: 7rem 250px 2rem 250px;
+    padding: 5rem 250px 5rem 250px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -43,7 +43,7 @@
 }
 
 .bioSection {
-    padding-bottom: 7rem;
+    padding-bottom: 0;
 }
 
 .bioContainer:nth-child(2)  {

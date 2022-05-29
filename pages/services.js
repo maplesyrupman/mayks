@@ -8,27 +8,27 @@ import Link from 'next/link'
 
 const services = [
     {
-        title: 'Project Management',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
-        img: '/projects/proj1/img-3.jpg'
-    },
-    {
         title: 'Full Home Renovation',
         blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
         img: '/projects/proj1/img-3.jpg'
     },
     {
         title: 'Kitchens',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
+        blurb: 'The most frequently used room in the house, your kitchen, defines your personality even more than your bedrooms. While we love the modern elements, when it comes to kitchen design, our designers focus on one aspect: Functionality!',
         img: '/projects/proj1/img-3.jpg'
     },
     {
         title: 'Bathrooms',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
+        blurb: 'A well-designed bathroom can bring about a magnanimous impact on the overall feel of the house. Whether you are looking to add value to flip the house, or have plans to settle in, a new bathroom can add heaps of functionality and style to your abode.',
         img: '/projects/proj2/img-6.jpg'
     },
     {
         title: 'Basement Finishing',
+        blurb: 'If you are thinking that your basement needs to perform more than just an extra space in your house, now is the time to act and get it done.',
+        img: '/projects/proj1/img-3.jpg'
+    },
+    {
+        title: 'Commercial Projects',
         blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
         img: '/projects/proj1/img-3.jpg'
     }
@@ -46,7 +46,10 @@ export default function Services() {
             <section className={styles.servicesParaContainer}>
                 <div className={styles.servicesPara}>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt.
+                        From exteriors to interior renovations, roofing, foundation, restoration, and remodeling bathrooms and kitchens, MAYKs has repeatedly surpassed its client’s expectations.
+                    </p>
+                    <p>
+                        Over-delivering is, perhaps, the norm at our end!
                     </p>
                 </div>
             </section>
@@ -67,7 +70,7 @@ export default function Services() {
                                 </div>
                                 <div className={styles.imgContainer}>
                                     <div className={styles.img} >
-                                    <Image src={service.img} layout='fixed' width={400} height={400} alt='service image' />
+                                        <Image src={service.img} layout='fixed' width={400} height={400} alt='service image' />
                                     </div>
                                 </div>
                             </div>

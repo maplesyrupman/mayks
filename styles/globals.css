@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html, body {
-    height: 100vh;
+    /* height: 100vh; */
     background-color: black;
 }
 
@@ -33,6 +33,7 @@ dl,
 dd {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -155,6 +156,34 @@ main {
   font-style: normal;
   z-index: 3;
   /* white-space: nowrap; */
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 46px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.headingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 500px;
+  overflow-y: hidden;
+}
+
+.headingImg {
+  width: 100%;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  z-index: 0;
 }
 
 .swiper-button-prev {

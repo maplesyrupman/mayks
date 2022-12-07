@@ -1,9 +1,9 @@
-import Layout from '../components/Layout'
+import Layout from '../../components/Layout'
 import Image from 'next/image'
 
 import { FaFaucet, FaBorderAll, FaRulerCombined, FaHome, FaHammer, FaPuzzlePiece } from 'react-icons/fa'
 
-import styles from '../styles/services.module.css'
+import styles from '../../styles/services.module.css'
 import Link from 'next/link'
 
 const services = [
@@ -78,7 +78,6 @@ export default function Services() {
                     })}
                 </section>
             </section>
-
         </Layout>
     )
 }

@@ -1,5 +1,7 @@
 import Layout from "../../components/Layout"
 import Image from "next/image"
+import ContactForm from "../../components/ContactForm"
+import Guarantee from '../../components/Guarantee'
 
 import style from "../../styles/servicesSpec.module.css"
 
@@ -7,7 +9,7 @@ export default function Service({ title, heroImg, heroWH, section1, section2 }) 
 
     return (
         <Layout>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '7rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '7rem', paddingBottom: '7rem' }}>
                 <section className='headingContainer'>
                     <div className='headingImg'>
                         <Image src={heroImg} alt={section1.alt} layout='responsive' width={heroWH[1]} height={heroWH[0]} />
@@ -33,26 +35,10 @@ export default function Service({ title, heroImg, heroWH, section1, section2 }) 
                     </div>
                 </section>
 
-                <section className={style.gurantee}>
-                    <h2>What you can Expect</h2>
-                    <div>
-                        <div>
-                            <h3>Quality Craftsmanship</h3>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt molit anim.</p>
-                        </div>
-                        <div>
-                            <h3>Open Communication</h3>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt molit anim.</p>
-                        </div>
-                        <div>
-                            <h3>Honesty and Integrity</h3>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt molit anim.</p>
-                        </div>
-                    </div>
-                </section>
+                <Guarantee />
 
-                <section>
-                    Contact Form
+                <section className={style.formContainer}>
+                    <ContactForm />
                 </section>
 
             </div>

@@ -1,0 +1,27 @@
+.guarantee {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.guarantee>div {
+    display: flex;
+    background-color: #f3b52f;
+    padding: 1rem;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.guarantee>div>div {
+    background-color: #F0F0F0;
+    padding: 1rem;
+    color: black;
+}
+
+.guarantee>div>div>h3 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 0.7rem;
+    color: black;
+}

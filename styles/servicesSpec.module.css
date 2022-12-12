@@ -28,30 +28,9 @@
     list-style-type:decimal !important;
 }
 
-.gurantee {
-    max-width: 1000px;
+.formContainer {
+    width: 450px;
     margin: 0 auto;
-    text-align: center;
-}
-
-.gurantee>div {
-    display: flex;
-    background-color: #f3b52f;
-    padding: 1rem;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.gurantee>div>div {
-    background-color: #F0F0F0;
-    padding: 1rem;
-    color: black;
-}
-
-.gurantee>div>div>h3 {
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 38px;
-    margin-bottom: 0.7rem;
-    color: black;
+    border:3px solid #f3b52f;
+    padding: 2.5rem;
 }

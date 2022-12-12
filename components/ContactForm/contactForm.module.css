@@ -1,0 +1,42 @@
+.headerSecondary {
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+.formBody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.fieldContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-weight: 700;
+}
+
+.fieldInput {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f7e6c3;
+    color: black;
+    resize: none;
+}
+
+.fieldInput:focus {
+    outline: 2px solid #F7CC70;
+}
+
+.errorMsg {
+    color: rgb(253, 83, 83);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.errorBorder {
+    border: 1px solid rgb(253, 83, 83);
+}
+

@@ -9,7 +9,7 @@ export default function Service({ title, heroImg, heroWH, section1, section2 }) 
 
     return (
         <Layout>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '7rem', paddingBottom: '7rem' }}>
+            <div className={style.contianer}>
                 <section className='headingContainer'>
                     <div className='headingImg'>
                         <Image src={heroImg} alt={section1.alt} layout='responsive' width={heroWH[1]} height={heroWH[0]} />

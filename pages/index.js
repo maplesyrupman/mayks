@@ -59,23 +59,25 @@ export default function Home() {
       <section className={`${styles.comResContainer} bgBlack`}>
         <div className={styles.comResTextContainer}>
           <div className={styles.comResText}>
-          <h2 className={`${styles.heading} ${styles.dark} ${styles.left}`}>
-            Experienced in Commercial <br />
-            and Residential Projects
-          </h2>
-          <p className={`${styles.text} ${styles.dark} ${styles.left}`}>
-            At MAYKS we believe every family is unique and so is their vision of a dream house! Some thrive on functionality while others focus on aesthetics.
-          </p>
-          <p className={`${styles.text} ${styles.dark} ${styles.left}`}>
-            Since we have been in the industry for over 20 years, we know EXACTLY what is it the client needs.
-          </p>
-          <p className={`${styles.text} ${styles.light} ${styles.left}`}>
-            Experience world-class luxury with 5-star construction and renovation experts.
-          </p>
-          <p className={`${styles.text} ${styles.light} ${styles.left}`}>
-            Another tasty titbit of information with a longer explanation
-            of what it means
-          </p>
+            <h2 className={`${styles.heading} ${styles.dark} ${styles.left}`}>
+              Experienced in Commercial <br />
+              and Residential Projects
+            </h2>
+            <div className={`${styles.text} ${styles.left} ${styles.dark}`}>
+              <p>
+                At MAYKS we believe every family is unique and so is their vision of a dream house! Some thrive on functionality while others focus on aesthetics.
+              </p>
+              <p>
+                Since we have been in the industry for over 20 years, we know EXACTLY what is it the client needs.
+              </p>
+              <p>
+                Experience world-class luxury with 5-star construction and renovation experts.
+              </p>
+              <p>
+                Another tasty titbit of information with a longer explanation
+                of what it means
+              </p>
+            </div>
           </div>
         </div>
 

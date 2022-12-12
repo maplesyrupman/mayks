@@ -1,3 +1,10 @@
+.contianer {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    padding-bottom: 7rem;
+}
+
 .firstSection {
     max-width: 800px;
     margin: 50px auto;

@@ -1,9 +1,13 @@
-import React from 'react';
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
-import styles from './testimonials.module.css'
+import { Navigation, A11y, Autoplay } from 'swiper';
 
-import { ImQuotesLeft, ImArrowRight2, ImArrowLeft2 } from 'react-icons/im'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import style from './testimonials.module.css'
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay'
+
 
 const testimonials = [
     {
@@ -24,81 +28,31 @@ const testimonials = [
     }
 ]
 
-const items = testimonials.map((test, i) => {
-    return (
-        <div className={`item ${styles.testSlide}`} data-value={`${i}`} key={i}>
-
-            <span className={styles.quote}>
-                <ImQuotesLeft />
-            </span>
-            <p className={styles.testText}>
-                {test.text}
-            </p>
-            <h3 className={styles.name}>
-                {test.name}
-            </h3>
-
-        </div>
-    )
-})
-
-
-const navItem = (item, i) => {
-    return <i key={i} onClick={() => this.Carousel.slideTo(i)} />;
-};
-
-function Carousel() {
-    return [
-        <AliceCarousel
-            mouseTracking
-            disableButtonsControls
-            autoPlay
-            animationType='slide'
-            animationEasingFunction
-            autoPlayInterval={7000}
-            items={items}
-            ref={(el) => (Carousel = el)}
-            infinite
-            responsive={{
-                0: {
-                    items: 1
-                }
-            }}
-            key='carousel'
-        />,
-        // <nav>{items.map(navItem)}</nav>,
-
-        <button className={styles.testBtn} onClick={() => Carousel.slidePrev()} key='prev'><ImArrowLeft2 /></button>,
-        <button className={styles.testBtn} onClick={() => Carousel.slideNext()} key='next'><ImArrowRight2 /></button>
-    ];
-}
-
 export default function Testimonials() {
     return (
-        <div className={styles.container}>
-                    <button className={styles.testBtn} onClick={() => Carousel.slidePrev()} key='prev'><ImArrowLeft2 /></button>
-            < div className={styles.carousel} >
-
-                <AliceCarousel
-                    mouseTracking
-                    disableButtonsControls
-                    autoPlay
-                    animationType='slide'
-                    animationEasingFunction
-                    autoPlayInterval={7000}
-                    items={items}
-                    ref={(el) => (Carousel = el)}
-                    infinite
-                    responsive={{
-                        0: {
-                            items: 1
-                        }
-                    }}
-                    key='carousel'
-                />
-
-            </div >
-            <button className={styles.testBtn} onClick={() => Carousel.slideNext()} key='next'><ImArrowRight2 /></button>
-        </div>
-    )
-}
+        <Swiper
+            // install Swiper modules
+            modules={[Navigation, Autoplay, A11y]}
+            spaceBetween={50}
+            slidesPerView={1}
+            speed={1200}
+            autoplay={{
+                delay: 4500,
+                disableOnInteraction: true
+            }}         
+              
+            navigation
+            loop
+            className={style.swiperCon}
+        >
+            {testimonials.map((test, idx) => (
+                <SwiperSlide key={idx}>
+                    <div className={style.slide}>
+                        <p className={style.text}>{test.text}</p>
+                        <h4 className={style.name}>{test.name}</h4>
+                    </div>
+                </SwiperSlide>
+            ))}
+        </Swiper>
+    );
+};

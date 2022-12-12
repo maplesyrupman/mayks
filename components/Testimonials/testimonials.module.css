@@ -1,64 +1,29 @@
-.carousel {
-    position: relative;
-    display: flex;
-    width: 100%;
-    overflow-x: hidden;
-}
 
-.testSlide {
-    height: 100%;
-    max-width: 828px;
-    padding: 64px 56px;
-    margin-left: auto;
-    margin-right: auto;
+.swiperCon {
+    width: 100%;
+    height: 400px;
+}
+.slide {
     display: flex;
     flex-direction: column;
-    gap: 1.3rem;
-    background-color: #F7CC70;
+    justify-content: center;
     align-items: center;
-    box-shadow: 4px 4px 4px rgba(22, 22, 22, 0.15);
-    border-radius: 5px;
-}
+    background-color: #F7CC70;
 
-.quote {
-    font-size: 4rem;
-    color: black;
-}
-
-.container {
-    display: flex;
-    width: 100%;
     height: 100%;
-}
-
-.testBtn {
-    font-size: 3rem;
-    color: #8A8A8A;
-}
-
-.testText {
-    text-align: center;
-    color: #161616;
-    font-size: 20px;
-    line-height: 30px;
+    width: 650px;
+    padding: 23px;
+    color: black;
+    margin: 0 auto;
 }
 
 .name {
-    font-size: 28px;
-    font-weight: 700;
-    color: #161616;
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+    margin-top: 1rem;
 }
 
-@media (max-width: 810px) {
-    .testBtn {
-        display: none;
-    }
-
-    .testSlide {
-        padding: 3rem;
-    }
-
-    .name {
-        text-align: center;
-    }
+.text {
+    text-align: center;
 }

@@ -19,7 +19,7 @@ export default function Slideshow({ imgDimensions, proj }) {
                 modules={[Navigation, Thumbs]}
                 thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
                 cssMode
-                className={styles.mainContainer}
+                // className={styles.mainContainer}
                 loop
             >
 

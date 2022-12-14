@@ -1,4 +1,6 @@
-const ejs = require('ejs')
+import axios from 'axios';
+import { responseSymbol } from 'next/dist/server/web/spec-compliant/fetch-event';
+
 const nodemailer = require('nodemailer')
 
 const transporter = nodemailer.createTransport({
@@ -57,40 +59,71 @@ function getAdminHtml(body) {
     `
 }
 
-export default function handler({ body }, res) {
-    const clientMailOptions = {
-        from: 'william@rwilabs.io',
-        to: body.email,
-        subject: 'Quote Request Received',
-        html: getClientHtml(body)
-    }
+async function verifyRecaptcha(token) {
+    const secretKey = process.env.reCAP_SECRET_KEY
 
-    const adminMailOptions = {
-        from: 'william@rwilabs.io',
-        to: 'will_weiland@hotmail.ca',
-        subject: 'Quote Request',
-        html: getAdminHtml(body)
-    }
+    return await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`)
+}
 
+export default async function handler({ body }, res) {
     try {
-        transporter.sendMail(clientMailOptions, function (err, data) {
-            if (err) {
-                console.error('mailer', err);
-            } else {
-                console.log("Client email sent successfully");
-            }
-        });
+        const { name, email, phone, message, token } = body
+        const recapRes = await verifyRecaptcha(token)
 
-        transporter.sendMail(adminMailOptions, function (err, data) {
-            if (err) {
-                console.log('admin mailer', err)
-            } else {
-                console.log('Admin email sent successfully')
-            }
-        })
-
-        res.status(200).json({ message: 'Emails sent successfully' })
+        if (recapRes.data.success && recapRes.data.score >= 0.5) {
+            return res
+                .status(200)
+                .json({
+                    status: 'Success',
+                    message: 'Thank you for your inquiry! We will reach out to you shortly'
+                })
+        } else {
+            return res.json({
+                status: 'Failed', 
+                message: 'Something went wrong... please try again'
+            })
+        }
     } catch (err) {
-        res.status(400).json({ message: err })
+        console.log(err)
+        return res.json({
+            status: 'Failed', 
+            message: 'Something went wrong... please try again'
+        })
     }
+
+    // const clientMailOptions = {
+    //     from: 'william@rwilabs.io',
+    //     to: body.email,
+    //     subject: 'Quote Request Received',
+    //     html: getClientHtml(body)
+    // }
+
+    // const adminMailOptions = {
+    //     from: 'william@rwilabs.io',
+    //     to: 'will_weiland@hotmail.ca',
+    //     subject: 'Quote Request',
+    //     html: getAdminHtml(body)
+    // }
+
+    // try {
+    //     transporter.sendMail(clientMailOptions, function (err, data) {
+    //         if (err) {
+    //             console.error('mailer', err);
+    //         } else {
+    //             console.log("Client email sent successfully");
+    //         }
+    //     });
+
+    //     transporter.sendMail(adminMailOptions, function (err, data) {
+    //         if (err) {
+    //             console.log('admin mailer', err)
+    //         } else {
+    //             console.log('Admin email sent successfully')
+    //         }
+    //     })
+
+    //     res.status(200).json({ message: 'Emails sent successfully' })
+    // } catch (err) {
+    //     res.status(400).json({ message: err })
+    // }
 }

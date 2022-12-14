@@ -1,4 +1,7 @@
-import { useState } from 'react'
+import axios from 'axios'
+import { useState, useCallback } from 'react'
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
+
 
 import styles from './contactForm.module.css'
 
@@ -7,6 +10,9 @@ export default function ContactForm() {
     const [formState, setFormState] = useState({ name: '', email: '', phone: '', message: '' })
     const [nameErr, setNameErr] = useState(false)
     const [emailErr, setEmailErr] = useState(false)
+    const [response, setResponse] = useState('')
+
+    const { executeRecaptcha } = useGoogleReCaptcha()
 
     function updateFormState(e) {
         const fieldName = e.target.name
@@ -28,35 +34,60 @@ export default function ContactForm() {
         }
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault()
+        setEmailErr(true)
         let isValid = true
         if (formState.name.length < 1) {
             setNameErr(true)
             isValid = false
         } else {
             setNameErr(false)
+            setResponse({status: 'Failed', messgae:'Please enter a valid name'})
         }
 
         if (!formState.email.match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
             setEmailErr(true)
             isValid = false
+            setResponse({status: 'Failed', messgae:'Please enter a valid email'})
             return
         } else {
             setEmailErr(false)
         }
 
+        if (!executeRecaptcha) return
+
+
         if (isValid) {
-            axios({
-                method: 'post',
-                url: '/api/contact',
-                data: formState
-            })
-                .then(response => {
-                    console.log(response.data)
+            try {
+                const token = await executeRecaptcha()
+                if (!token) {
+                    setResponse({ message: "Failed to send", status: 'Failed' })
+                    return
+                }
+    
+                const result = await axios({
+                    method: 'post',
+                    url: '/api/contact',
+                    data: {...formState, token}
                 })
+                    .then(response => {
+                        if (response.data) {
+                            setResponse({
+                                message: response.data.message,
+                                status: response.data.status
+                            })
+                        }
+                    })
+            } catch (err) {
+                setResponse({ message: "Failed to send", status: 'Failed' })
+            }
+
         } else {
-            console.log('invalid form')
+            setResponse({
+                message: "Invalid form input",
+                status: 'Failed'
+            })
         }
     }
 
@@ -103,6 +134,7 @@ export default function ContactForm() {
                     Submit
                 </button>
             </div>
+            {response && <p>{response.message}</p>}
         </form>
     )
 }

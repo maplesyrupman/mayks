@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { useState, useCallback } from 'react'
+import { useState } from 'react'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 
 
@@ -69,7 +69,7 @@ export default function ContactForm() {
                 const result = await axios({
                     method: 'post',
                     url: '/api/contact',
-                    data: {...formState, token}
+                    data: {...formState, token},
                 })
                     .then(response => {
                         if (response.data) {

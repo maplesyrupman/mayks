@@ -1,37 +1,34 @@
 import Layout from '../../components/Layout'
 import Image from 'next/image'
 
-import { FaFaucet, FaBorderAll, FaRulerCombined, FaHome, FaHammer, FaPuzzlePiece } from 'react-icons/fa'
-
 import styles from '../../styles/services.module.css'
 import Link from 'next/link'
 
 const services = [
     {
-        title: 'Full Home Renovation',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
-        img: '/projects/proj1/img-3.jpg'
+        title: 'Full Home Renovations',
+        blurb: 'Have you recently purchased an older home or condominium that needs a facelift? Whether your home is a bungalow, a 4-story townhouse, or a mansion, we have you covered.',
+        img: '/projects/proj1/img-3.jpg',
+        path: 'full-home'
     },
     {
         title: 'Kitchens',
-        blurb: 'The most frequently used room in the house, your kitchen, defines your personality even more than your bedrooms. While we love the modern elements, when it comes to kitchen design, our designers focus on one aspect: Functionality!',
-        img: '/projects/proj1/img-3.jpg'
+        blurb: 'The kitchen is the heart of any home. Here you\'ll prepare your breakfast in the morning and enjoy home-cooked meals. We\'re experts in striking perfect balance between luxuary and functionality.',
+        img: '/projects/proj1/img-3.jpg',
+        path: 'kitchens'
     },
     {
         title: 'Bathrooms',
-        blurb: 'A well-designed bathroom can bring about a magnanimous impact on the overall feel of the house. Whether you are looking to add value to flip the house, or have plans to settle in, a new bathroom can add heaps of functionality and style to your abode.',
-        img: '/projects/proj2/img-6.jpg'
+        blurb: 'Imagine transforming your bathroom into an oasis, with heated floors and a bathtub you can stretch out in. At Mayk\'s, we get luxury bathrooms. Let us turn your bathroom into a spa!',
+        img: '/projects/proj2/img-6.jpg',
+        path: 'bathrooms'
     },
     {
-        title: 'Basement Finishing',
-        blurb: 'If you are thinking that your basement needs to perform more than just an extra space in your house, now is the time to act and get it done.',
-        img: '/projects/proj1/img-3.jpg'
+        title: 'Basements',
+        blurb: 'Many homeowners live with unfinished basements. At Mayk\'s, we believe that the basement can be the best part of your home for relaxing and entertainment. Let us help you build the basement of your dreams!',
+        img: '/projects/proj1/img-3.jpg',
+        path: 'basements'
     },
-    {
-        title: 'Commercial Projects',
-        blurb: 'Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus.',
-        img: '/projects/proj1/img-3.jpg'
-    }
 ]
 
 export default function Services() {
@@ -64,8 +61,8 @@ export default function Services() {
                                 <div className={styles.serviceTextContainer}>
                                     <h2 className={styles.serviceHeading}>{service.title}</h2>
                                     <p className={styles.serviceText}>{service.blurb}</p>
-                                    <Link href='/contact'>
-                                        <a className='btn btnXs bgGold blackText'>Request a Quote</a>
+                                    <Link href={`/services/${service.path}`}>
+                                        <a className='btn btnXs bgGold blackText'>Learn More</a>
                                     </Link>
                                 </div>
                                 <div className={styles.imgContainer}>

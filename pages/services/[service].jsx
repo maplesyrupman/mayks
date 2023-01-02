@@ -9,14 +9,14 @@ export default function Service({ title, heroImg, heroWH, section1, section2 }) 
 
     return (
         <Layout>
-            <div className={style.contianer}>
-                <section className='headingContainer'>
-                    <div className='headingImg'>
-                        <Image src={heroImg} alt={section1.alt} layout='responsive' width={heroWH[1]} height={heroWH[0]} />
-                    </div>
-                    <h1 className="pageHeading">{title}</h1>
-                </section>
+            <section className={style.headingContainer}>
+                <div className={style.headingImg}>
+                    <Image src={heroImg} alt={section1.alt} layout='responsive' width={heroWH[1]} height={heroWH[0]} />
+                </div>
+                <h1 className="pageHeading">{title}</h1>
+            </section>
 
+            <div className={style.contianer}>
                 <section className={style.firstSection}>
                     <h2>{section1.heading}</h2>
                     {section1.paras.map((para, idx) => <p key={idx}>{para}</p>)}
@@ -60,6 +60,7 @@ export async function getStaticProps() {
             ]
         },
         section2: {
+
             heading: 'What we do',
             img: '/projects/proj1/img-3.jpg',
             imgWH: [1, 1],

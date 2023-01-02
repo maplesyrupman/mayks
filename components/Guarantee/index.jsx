@@ -8,7 +8,7 @@ export default function Guarantee() {
             <div>
                 <div>
                     <h3>Quality Craftsmanship</h3>
-                    <p>You want to complete your project with ease and little to no stress, we understand that. That&apos;s why our main goal is to make you satisfied and happy. With limitless luxury, our customers are always satisfied, check out our reviews on Google </p>
+                    <p>You want to complete your project with ease and little to no stress, we understand that. </p>
                 </div>
                 <div>
                     <h3>Open Communication</h3>

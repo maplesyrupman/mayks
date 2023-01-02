@@ -25,3 +25,10 @@
     margin-bottom: 0.7rem;
     color: black;
 }
+
+@media (max-width: 810px) {
+    .guarantee>div {
+        flex-direction: column;
+        max-width: 400px;
+    }
+}

@@ -5,13 +5,15 @@ import Guarantee from '../../components/Guarantee'
 
 import style from "../../styles/servicesSpec.module.css"
 
-export default function Service({ title, heroImg, heroWH, section1, section2 }) {
+import services from '../../services.json'
+
+export default function Service({ title, heroImg, heroAlt, heroWH, section1, section2 }) {
 
     return (
         <Layout>
             <section className={style.headingContainer}>
                 <div className={style.headingImg}>
-                    <Image src={heroImg} alt={section1.alt} layout='responsive' width={heroWH[1]} height={heroWH[0]} />
+                    <Image src={heroImg} alt={heroAlt} layout='responsive' width={heroWH[1]} height={heroWH[0]} />
                 </div>
                 <h1 className="pageHeading">{title}</h1>
             </section>
@@ -22,16 +24,17 @@ export default function Service({ title, heroImg, heroWH, section1, section2 }) 
                     {section1.paras.map((para, idx) => <p key={idx}>{para}</p>)}
                 </section>
 
-                <section className={style.secondSection}>
+                <section className={style.secondSection} >
+                    <div style={{ width: "65%", height: "500px", overflowY: 'hidden' }}
+                        className=""
+                    >
+                        <Image src={section2.img} alt={section2.alt} layout='responsive' width={section2.imgWH[0]} height={section2.imgWH[1]} />
+                    </div>
                     <div className={style.wwdCont}>
                         <h2>What We Do</h2>
-                        <ol>
+                        <ul className="">
                             {section2.paras.map((para, idx) => <li key={idx}>{para}</li>)}
-                        </ol>
-                    </div>
-
-                    <div style={{ width: "65%", maxHeight: '500px', overflowY: 'hidden' }}>
-                        <Image src={section2.img} alt={section2.alt} layout='responsive' width={section2.imgWH[0]} height={section2.imgWH[1]} />
+                        </ul>
                     </div>
                 </section>
 
@@ -46,37 +49,10 @@ export default function Service({ title, heroImg, heroWH, section1, section2 }) 
     )
 }
 
-export async function getStaticProps() {
-    const mockService = {
-        title: 'Basemenets',
-        heroImg: '/projects/proj4/img-3.jpg',
-        heroWH: [1536, 2048],
-        heroAlt: 'A nice kitchen',
-        section1: {
-            heading: 'We do Basements',
-            paras: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            ]
-        },
-        section2: {
-
-            heading: 'What we do',
-            img: '/projects/proj1/img-3.jpg',
-            imgWH: [1, 1],
-            alt: 'A nice basement kitchen',
-            paras: [
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-
-            ]
-        }
-    }
-
+export async function getStaticProps({ params }) {
     return {
         props: {
-            ...mockService
+            ...services[params.service]
         }
     }
 }
@@ -84,7 +60,10 @@ export async function getStaticProps() {
 export async function getStaticPaths() {
     return {
         paths: [
-            '/services/basements'
+            '/services/basements',
+            '/services/full-home',
+            '/services/bathrooms',
+            '/services/kitchens'
         ],
         fallback: true
     }

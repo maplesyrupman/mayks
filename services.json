@@ -1,0 +1,131 @@
+{
+    "full-home": {
+        "title": "Full Home Renovations",
+        "heroImg": "/projects/proj4/img-3.jpg",
+        "heroWH": [1536, 2048],
+        "heroAlt": "full home renovation",
+        "section1": {
+            "heading": "Revamp Your Entire Home",
+            "paras": [
+                "Do you love the house you own but it doesn't feel like your home yet? We understand that feeling. We also have a solution for that: Full Home Renovations. When you like the exterior of your house but feel like the exterior needs some work, that's where we come in. We have you covered.",
+                "Mayk's specializes in whole home renovations. We keep the structure of your home while changing the interior design and layout to match your ideal concept. Think of it as a total home makeover. We usually start these projects from scratch and plan according to your dream designs. You also have the option of keeping any elements that you choose. Some people choose to keep HVAC and plumbing the same depending on their condition."
+            ]
+        },
+        "section2": {
+            "heading": "What we do",
+            "img": "/projects/proj1/img-3.jpg",
+            "imgWH": [1, 1],
+            "alt": "A nice basement kitchen",
+            "paras": [
+                "Custom cabinets & prefab installation ",
+                "Custom countertops and prefab installation",
+                "Heated flooring",
+                "HVAC",
+                "Framing",
+                "Custom pantries",
+                "Lighting",
+                "Crown moulding",
+                "Stairways",
+                "Plumbing",
+                "Electrical wiring",
+                "Flooring",
+                "Insulation",
+                "Painting",
+                "Demolition and waste removal",
+                "And more!"
+            ]
+        }
+    },
+    "basements": {
+        "title": "Basement Finishing",
+        "heroImg": "/projects/proj4/img-3.jpg",
+        "heroWH": [1536, 2048],
+        "heroAlt": "finished luxury basement",
+        "section1": {
+            "heading": "Bring Your Basement to Life",
+            "paras": [
+                "In the past, the basement used to be a space for storage and keeping family heirlooms. Now, a basement is like a second living room. Modern designs and features such as heated flooring and custom rooms have changed people's views on basements forever.",
+                "At Mayk's we take care of it all, from the basement to bedroom changes, media room additions or just a facelift to get your guests jealous. We help you from start to finish, from flooring, design and wiring. We do it all. All you have to do is make sure you invite your friends and family. Don't forget to record their reactions. "
+            ]
+        },
+        "section2": {
+            "heading": "What we do",
+            "img": "/projects/proj1/img-3.jpg",
+            "imgWH": [1, 1],
+            "alt": "basement renovation",
+            "paras": [
+                "Flooring",
+                "Drywall",
+                "Open concept renovations", 
+                "Framing",
+                "Crown moulding",
+                "Closet creation",
+                "Stairways",
+                "Walk-out basement additions",
+                "Plumbing",
+                "Electrical wiring"
+            ]
+        }
+    },
+    "bathrooms": {
+        "title": "Bathrooms",
+        "heroImg": "/projects/proj4/img-3.jpg",
+        "heroWH": [1536, 2048],
+        "heroAlt": "beautiful bathroom",
+        "section1": {
+            "heading": "Beautiful Bathrooms",
+            "paras": [
+                "The bathroom is where we freshen up, rejuvenate, and wind down after a long day's work. A simple bathroom remodel can change the dynamic of your entire home. We design and create the bathroom of your dreams through simplicity and functionality. Put simply, we'll make your bathroom tidy and user-friendly, all while maximizing the feel of luxury. ",
+                "At Mayk's we do renovations or complete remodelling of your bathroom. Through minor changes from the bathtub, shower and vanity to a complete overhaul of the space, we plan with you to find out exactly what you're looking for. From jacuzzis to luxurious heated tiles, let us revamp your bathroom forever. Let's make your bathroom into the spa you always wanted."
+            ]
+        },
+        "section2": {
+            "heading": "What we do",
+            "img": "/projects/proj1/img-3.jpg",
+            "imgWH": [1, 1],
+            "alt": "bathroom with mosaic tiling",
+            "paras": [
+                "Custom Vanities",
+                "Custom Showers",
+                "Bidet toilets",
+                "Mosaic tiles",
+                "Mirror cabinet",
+                "Heated floors",
+                "Fan installation",
+                "Plumbing"
+            ]
+        }
+    },
+    "kitchens": {
+        "title": "Kitchens",
+        "heroImg": "/projects/proj4/img-3.jpg",
+        "heroWH": [1536, 2048],
+        "heroAlt": "renovated kitchen",
+        "section1": {
+            "heading": "Spice Up Your Kitchen",
+            "paras": [
+                "People are opting for a more minimal look with big countertops and islands. Our focus on kitchen renovations is magnificent craftsmanship and a world-class customer experience. We only start when you're happy with the designs.",
+                "Imagine waking up before sunrise, walking down your hallway and feeling proud every time you step foot in your kitchen. That feeling is one we have made real for dozens of families, and we can't wait for you to feel it too. From classic farmhouse-style kitchens to luxurious marble-decorated kitchens, we want you to feel exhilarated every time you step foot in your new kitchen."
+            ]
+        },
+        "section2": {
+            "heading": "What we do",
+            "img": "/projects/proj1/img-3.jpg",
+            "imgWH": [1, 1],
+            "alt": "beautiful modern kitchen",
+            "paras": [
+                "Custom Cabinets",
+                "Tile and backsplash",
+                "Custom Countertops",
+                "Sinks",
+                "Breakfast nook",
+                "Open-concept designs",
+                "Lighting",
+                "Plumbing",
+                "HVAC",
+                "Heated flooring",
+                "Painting"
+            ]
+        }
+    }
+}

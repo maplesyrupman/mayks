@@ -25,16 +25,14 @@ export default function Service({ title, heroImg, heroAlt, heroWH, section1, sec
                 </section>
 
                 <section className={style.secondSection} >
-                    <div style={{ width: "65%", height: "500px", overflowY: 'hidden' }}
-                        className=""
-                    >
-                        <Image src={section2.img} alt={section2.alt} layout='responsive' width={section2.imgWH[0]} height={section2.imgWH[1]} />
-                    </div>
                     <div className={style.wwdCont}>
                         <h2>What We Do</h2>
                         <ul className="">
                             {section2.paras.map((para, idx) => <li key={idx}>{para}</li>)}
                         </ul>
+                    </div>
+                    <div className={style.ssImg}>
+                        <Image src={section2.img} alt={section2.alt} layout='responsive' width={section2.imgWH[0]} height={section2.imgWH[1]} />
                     </div>
                 </section>
 
